@@ -17,13 +17,13 @@ const Card = styledComponents.div`
     margin-top: -10px;
     margin-bottom: 10px;
   }
+  border-bottom: 4px solid ${(props) => props.accentColor};
+  min-height: ${(props) => props.minHeight};
+  min-width: ${(props) => props.minWidth};
 `;
 
 const CardImage = styledComponents(Image)`
-svg{
-    height: ${(props) => props.height};
-    width: ${(props) => props.width};
-}
+
 `;
 
 const RedText = styledComponents.h1`
@@ -43,16 +43,27 @@ const Divider = styledComponents.div`
 
 export default function ResourceCard(props) {
   return (
-    <Card width={"40em"}>
+    <Card
+      minWidth={"15vw"}
+      minHeight={"25vh"}
+      width={"25vw"}
+      height={"30vh"}
+      accentColor={props.accentColor}
+    >
       <Column>
         <Row backgroundColor={"transparent"} alignItems={"center"}>
-          <CardImage src={props.image} height={"100"} width={"100"} />
+          <CardImage
+            src={props.image}
+            layout={"fixed"}
+            width={"100vw"}
+            height={"100vw"}
+          />
           <Padding padding={"20px"} />
-          <Text fontSize={"2.3em"}>{props.title}</Text>
+          <Text fontSize={"1.5vw"}>{props.title}</Text>
         </Row>
         <Padding padding={"10px"} />
         <Divider />
-        <Text fontSize={"2em"} fontFamily={"Josefin Sans"}>
+        <Text fontSize={"1.3vw"} fontFamily={"Josefin Sans"}>
           {props.text}
         </Text>
       </Column>

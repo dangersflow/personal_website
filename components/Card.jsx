@@ -37,14 +37,16 @@ font-size: ${(props) => props.fontSize};
 
 export default function ProfileCard(props) {
   return (
-    <Card width={"40em"}>
+    <Card width={"30vw"}>
       <Row
         backgroundColor={"red"}
         width={"100%"}
         justifyContent={"center"}
         borderRadius={"20px"}
       >
-        <Text color="white">Hi. My Name Is:</Text>
+        <Text color="white" fontSize={"1.3vw"}>
+          Hi. My Name Is:
+        </Text>
       </Row>
       <Padding padding={"10px"} />
       <Column alignItems={"center"}>
@@ -54,7 +56,7 @@ export default function ProfileCard(props) {
           width={200}
           layout={"fixed"}
         />
-        <Text fontSize={"2.5em"}>Francisco Gonzalez</Text>
+        <Text fontSize={"1.6vw"}>Francisco Gonzalez</Text>
       </Column>
       <Row
         backgroundColor={"grey"}
@@ -62,7 +64,7 @@ export default function ProfileCard(props) {
         justifyContent={"center"}
         borderRadius={"20px"}
       >
-        <Text color={"white"} fontSize={"1.5em"}>
+        <Text color={"white"} fontSize={"1vw"}>
           Software Engineer
         </Text>
       </Row>

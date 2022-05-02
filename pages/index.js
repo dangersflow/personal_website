@@ -19,8 +19,9 @@ export default function Home() {
           <ProfileCard text={"Francisco Gonzalez"} image={profile} />
         </Row>
         <Padding padding={"6%"} />
-        <Row backgroundColor={"transparent"} height={"30em"}>
+        <Row backgroundColor={"transparent"} height={"35vh"}>
           <ResourceCard
+            accentColor={"green"}
             title={"Github"}
             image={github}
             text={
@@ -29,6 +30,7 @@ export default function Home() {
           />
           <Padding padding={"3%"} />
           <ResourceCard
+            accentColor={"blue"}
             title={"LinkedIn"}
             image={linkedin}
             text={
@@ -37,8 +39,9 @@ export default function Home() {
           />
         </Row>
         <Padding padding={"3%"} />
-        <Row backgroundColor={"transparent"} height={"30em"}>
+        <Row backgroundColor={"transparent"} height={"35vh"}>
           <ResourceCard
+            accentColor={"red"}
             title={"Research"}
             image={research}
             text={
@@ -47,6 +50,7 @@ export default function Home() {
           />
           <Padding padding={"3%"} />
           <ResourceCard
+            accentColor={"purple"}
             title={"DEV.to"}
             image={dev}
             text={
