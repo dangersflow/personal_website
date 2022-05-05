@@ -5,6 +5,22 @@ import Image from "next/image";
 import { useTheme } from "styled-components";
 
 const Card = styledComponents.div`
+  @media (max-width: 480px) {
+    width: 10em;
+  }
+
+  @media (max-width: 768px) {
+    width: 20em;
+  }
+
+  @media (max-width: 1024px) {
+    width: 30em;
+  }
+
+  @media (max-width: 1200px) {
+    width: 40em;
+  }
+
   background-color: ${(props) => props.theme.colors.secondary};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
@@ -37,14 +53,14 @@ font-size: ${(props) => props.fontSize};
 
 export default function ProfileCard(props) {
   return (
-    <Card width={"30vw"}>
+    <Card width={"55em"}>
       <Row
         backgroundColor={"red"}
         width={"100%"}
         justifyContent={"center"}
         borderRadius={"20px"}
       >
-        <Text color="white" fontSize={"1.3vw"}>
+        <Text color="white" fontSize={"2.2em"}>
           Hi. My Name Is:
         </Text>
       </Row>
@@ -56,7 +72,7 @@ export default function ProfileCard(props) {
           width={200}
           layout={"fixed"}
         />
-        <Text fontSize={"1.6vw"}>Francisco Gonzalez</Text>
+        <Text fontSize={"2.6em"}>Francisco Gonzalez</Text>
       </Column>
       <Row
         backgroundColor={"grey"}
@@ -64,7 +80,7 @@ export default function ProfileCard(props) {
         justifyContent={"center"}
         borderRadius={"20px"}
       >
-        <Text color={"white"} fontSize={"1vw"}>
+        <Text color={"white"} fontSize={"1.7em"}>
           Software Engineer
         </Text>
       </Row>

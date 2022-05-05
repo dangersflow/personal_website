@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Column, Padding } from "../styles/globalStyles";
+import { Row, Column, Padding, Button } from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import Image from "next/image";
 import { useTheme } from "styled-components";
@@ -43,29 +43,34 @@ const Divider = styledComponents.div`
 
 export default function ResourceCard(props) {
   return (
-    <Card
-      minWidth={"15vw"}
-      minHeight={"25vh"}
-      width={"25vw"}
-      height={"30vh"}
-      accentColor={props.accentColor}
-    >
+    <Card width={"40em"} height={"25em"} accentColor={props.accentColor}>
       <Column>
         <Row backgroundColor={"transparent"} alignItems={"center"}>
           <CardImage
             src={props.image}
             layout={"fixed"}
-            width={"100vw"}
-            height={"100vw"}
+            width={"100em"}
+            height={"100em"}
           />
           <Padding padding={"20px"} />
-          <Text fontSize={"1.5vw"}>{props.title}</Text>
+          <Text fontSize={"2.2em"}>{props.title}</Text>
         </Row>
         <Padding padding={"10px"} />
         <Divider />
-        <Text fontSize={"1.3vw"} fontFamily={"Josefin Sans"}>
+        <Text fontSize={"2em"} fontFamily={"Josefin Sans"}>
           {props.text}
         </Text>
+        <Column backgroundColor={"red"}>
+          <Button borderRadius={"25px"} width={"5em"} justifyContent={"center"}>
+            <Text
+              color={"white"}
+              fontSize={"1.5em"}
+              fontFamily={"Josefin Sans"}
+            >
+              -{">"}
+            </Text>
+          </Button>
+        </Column>
       </Column>
     </Card>
   );
