@@ -38,6 +38,47 @@ flex-flow: row nowrap;
 }
 `;
 
+export const FrostedRow = styledComponents.div`
+justify-content: ${(props) => props.justifyContent};
+align-items: ${(props) => props.alignItems};
+width: ${(props) => props.width};
+height: ${(props) => props.height};
+padding: ${(props) => props.padding};
+border-radius: ${(props) => props.borderRadius};
+flex: 1 0 auto;
+display: flex;
+flex-flow: row nowrap;
+
+-webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+backdrop-filter: blur(8px); /* Chrome and Opera */
+box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+background-color: rgb(228 228 228 / 15%); 
+
+@media (min-width: 480px) {
+  flex: 1 1 auto;
+display: flex;
+flex-flow: row wrap;
+}
+
+@media (min-width: 768px) {
+  flex: 1 1 auto;
+display: flex;
+flex-flow: row wrap;
+}
+
+@media (min-width: 1024px) {
+flex: 1 1 auto;
+display: flex;
+flex-flow: row nowrap;
+}
+
+@media (min-width: 1920px) {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+`;
+
 export const Wrapper = styledComponents.div`
     display: flex;
     flex-direction: column;
@@ -115,10 +156,14 @@ border-radius: ${(props) => props.borderRadius};
 font-size: ${(props) => props.fontSize};
 font-weight: ${(props) => props.fontWeight};
 font-family: ${(props) => props.fontFamily};
-background: blue;
-border: 1px solid black;
+border: 2px solid black;
 display: flex;
 flex-direction: row;
+
+-webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+backdrop-filter: blur(8px); /* Chrome and Opera */
+box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 5%);
+background-color: black;
 `;
 
 export const Container = styledComponents.div`
@@ -126,4 +171,5 @@ display: flex;
 flex-direction: column;
 justify-content: ${(props) => props.justifyContent};
 align-items: ${(props) => props.alignItems};
+background-color: ${(props) => props.backgroundColor};
 `;

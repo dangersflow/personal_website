@@ -60,8 +60,12 @@ export default function ResourceCard(props) {
         <Text fontSize={"2em"} fontFamily={"Josefin Sans"}>
           {props.text}
         </Text>
-        <Column backgroundColor={"red"}>
-          <Button borderRadius={"25px"} width={"5em"} justifyContent={"center"}>
+        <Column justifyContent={"end"} alignItems={"end"}>
+          <Button
+            borderRadius={"25px"}
+            width={"100px"}
+            justifyContent={"center"}
+          >
             <Text
               color={"white"}
               fontSize={"1.5em"}

@@ -49,13 +49,19 @@ color: white;
 position: absolute;
 z-index: -1;
 opacity: ${(props) => (props.hovering ? "1" : "0")};
-border: 2px solid black;
 border-radius: 20px;
 padding: 10px 20px 10px 20px;
 font-size: 1.4em;
-background-color: black;
+
+border: 2px solid black;
+
 transform: ${(props) =>
   props.hovering ? `translateY(${props.subtitlePosition})` : "translateY(0%);"};
+  -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+  backdrop-filter: blur(8px); /* Chrome and Opera */
+  box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+  background-color: rgb(228 228 228 / 15%); 
+  
 
 `;
 

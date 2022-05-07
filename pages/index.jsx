@@ -9,7 +9,14 @@ import dev from "../images/dev.svg";
 import blob from "../images/blob.svg";
 import blob2 from "../images/blob2.svg";
 import myself from "../images/myself.png";
-import { Padding, Row, Column, Text, Wrapper } from "../styles/globalStyles";
+import {
+  Padding,
+  Row,
+  Column,
+  Text,
+  Wrapper,
+  FrostedRow,
+} from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import reactLogo from "../images/react.svg";
 import htmlLogo from "../images/html.svg";
@@ -150,11 +157,7 @@ export default function Home() {
               </BackgroundMyselfContainer>
             </Row>
             <Padding padding={"3%"} />
-            <Row
-              justifyContent={"space-evenly"}
-              backgroundColor={"white"}
-              alignItems={"center"}
-            >
+            <Row justifyContent={"space-evenly"} alignItems={"center"}>
               <LogoWithSub
                 src={reactLogo.src}
                 subtitle={"React"}
@@ -173,12 +176,12 @@ export default function Home() {
               <LogoWithSub
                 src={cssLogo.src}
                 subtitle={"CSS3"}
-                subtitlePosition={"120px"}
+                subtitlePosition={"160px"}
               />
               <LogoWithSub
                 src={nextLogo.src}
                 subtitle={"Next.js"}
-                subtitlePosition={"110px"}
+                subtitlePosition={"130px"}
               />
             </Row>
           </Column>
