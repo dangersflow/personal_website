@@ -16,6 +16,8 @@ import {
   Text,
   Wrapper,
   FrostedRow,
+  SmallPadding,
+  ExtraSmallPadding,
 } from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import reactLogo from "../images/react.svg";
@@ -46,13 +48,13 @@ const BackgroundBlobContainer = styledComponents.div`
   }
 
   @media (min-width: 1024px) {
-    width: 500px;
-    height: 400px;
+    width: 35vw;
+    height: 35vw;
   }
 
   @media (min-width: 1920px) {
-    width: 800px;
-    height: 700px;
+    width: 900px;
+    height: 800px;
   }
 `;
 
@@ -77,13 +79,13 @@ const BackgroundMyselfContainer = styledComponents.div`
   }
 
   @media (min-width: 1024px) {
-    width: 500px;
-    height: 400px;
+    width: 35vw;
+    height: 35vw;
   }
 
   @media (min-width: 1920px) {
-    width: 800px;
-    height: 700px;
+    width: 900px;
+    height: 800px;
   }
 `;
 
@@ -186,12 +188,8 @@ export default function Home() {
             </Row>
           </Column>
         </Row>
-        <Padding padding={"9%"} />
-        <Row
-          backgroundColor={"transparent"}
-          height={"35em"}
-          justifyContent={"center"}
-        >
+        <SmallPadding />
+        <Row backgroundColor={"transparent"} justifyContent={"center"}>
           <ResourceCard
             accentColor={"green"}
             title={"Github"}
@@ -200,7 +198,7 @@ export default function Home() {
               "Here you can find all of my GitHub repositories and projects! Most of my work and any future projects will be found here."
             }
           />
-          <Padding padding={"3%"} />
+          <ExtraSmallPadding />
           <ResourceCard
             accentColor={"blue"}
             title={"LinkedIn"}
@@ -210,11 +208,8 @@ export default function Home() {
             }
           />
         </Row>
-        <Row
-          backgroundColor={"transparent"}
-          height={"35em"}
-          justifyContent={"center"}
-        >
+        <ExtraSmallPadding />
+        <Row backgroundColor={"transparent"} justifyContent={"center"}>
           <ResourceCard
             accentColor={"red"}
             title={"Research"}
@@ -223,7 +218,7 @@ export default function Home() {
               "This is my research group's website! It contains a lot of information about the research that I do, and what the group itself has done!"
             }
           />
-          <Padding padding={"3%"} />
+          <ExtraSmallPadding />
           <ResourceCard
             accentColor={"purple"}
             title={"DEV.to"}

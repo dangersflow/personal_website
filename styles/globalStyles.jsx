@@ -125,6 +125,50 @@ export const Padding = styledComponents.div`
 padding: ${(props) => props.padding};
 `;
 
+export const SmallPadding = styledComponents.div`
+padding: 10em;
+
+@media (min-width: 480px) {
+  
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 1024px) {
+  padding: 10em;
+}
+
+@media (min-width: 1920px) {
+  padding: 13em;
+}
+`;
+
+export const ExtraSmallPadding = styledComponents.div`
+padding: 10em;
+
+@media (min-width: 480px) {
+  
+}
+
+@media (min-width: 768px) {
+  padding: 1em;
+}
+
+@media (min-width: 1024px) {
+  padding: 1em;
+}
+
+@media (min-width: 1920px) {
+  padding: 2em;
+}
+`;
+
+export const BigPadding = styledComponents.div`
+padding: ${(props) => props.padding};
+`;
+
 export const Text = styledComponents.h1`
 @media (min-width: 480px) {
     font-size: 20px;
@@ -135,11 +179,53 @@ export const Text = styledComponents.h1`
   }
 
   @media (min-width: 1024px) {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   @media (min-width: 1920px) {
     font-size: 30px;
+  }
+
+  color: ${(props) => props.color};
+
+`;
+
+export const LargeText = styledComponents.h1`
+@media (min-width: 480px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 35px;
+  }
+
+  color: ${(props) => props.color};
+
+`;
+
+export const SmallText = styledComponents.h1`
+@media (min-width: 480px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 25px;
   }
 
   color: ${(props) => props.color};

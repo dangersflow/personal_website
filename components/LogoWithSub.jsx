@@ -7,6 +7,27 @@ const Logo = styledComponents.div`
 position: absolute;
 display: flex; 
 flex: 0 1;
+
+img{
+  width: 120px;
+
+  @media (min-width: 480px) {
+
+  }
+  
+  @media (min-width: 768px) {
+    width: 90px;
+  }
+  
+  @media (min-width: 1024px) {
+    width: 90px;
+  }
+  
+  @media (min-width: 1920px) {
+    width: 120px;
+  }
+}
+
 @media (min-width: 480px) {
   width: 150px;
   height: 200px;
@@ -74,11 +95,8 @@ export function LogoWithSub(props) {
       <Logo>
         <img
           src={props.src}
-          style={{
-            width: "120px",
-          }}
-          onMouseOver={() => setHovering(!hovering)}
-          onMouseOut={() => setHovering(!hovering)}
+          onMouseOver={() => setHovering(true)}
+          onMouseOut={() => setHovering(false)}
         ></img>
       </Logo>
       <Subtitle hovering={hovering} subtitlePosition={props.subtitlePosition}>

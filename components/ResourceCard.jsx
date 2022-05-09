@@ -1,5 +1,13 @@
 import React from "react";
-import { Row, Column, Padding, Button } from "../styles/globalStyles";
+import {
+  Row,
+  Column,
+  Padding,
+  Button,
+  Text,
+  SmallText,
+  LargeText,
+} from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import Image from "next/image";
 import { useTheme } from "styled-components";
@@ -20,6 +28,24 @@ const Card = styledComponents.div`
   border-bottom: 4px solid ${(props) => props.accentColor};
   min-height: ${(props) => props.minHeight};
   min-width: ${(props) => props.minWidth};
+
+  @media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+  height: 20em;
+  width: 35em;
+}
+
+@media (min-width: 1920px) {
+  height: 25em;
+  width: 40em;
+}
 `;
 
 const CardImage = styledComponents(Image)`
@@ -31,19 +57,13 @@ color: red;
 font-size: ${(props) => props.fontSize};
 `;
 
-const Text = styledComponents.h1`
-color: ${(props) => props.color};
-font-size: ${(props) => props.fontSize};
-font-family: ${(props) => props.fontFamily};
-`;
-
 const Divider = styledComponents.div`
     border-top: 2px solid black;
 `;
 
 export default function ResourceCard(props) {
   return (
-    <Card width={"40em"} height={"25em"} accentColor={props.accentColor}>
+    <Card accentColor={props.accentColor}>
       <Column>
         <Row backgroundColor={"transparent"} alignItems={"center"}>
           <CardImage
@@ -53,26 +73,20 @@ export default function ResourceCard(props) {
             height={"100em"}
           />
           <Padding padding={"20px"} />
-          <Text fontSize={"2.2em"}>{props.title}</Text>
+          <LargeText className="lg">{props.title}</LargeText>
         </Row>
         <Padding padding={"10px"} />
         <Divider />
-        <Text fontSize={"2em"} fontFamily={"Josefin Sans"}>
-          {props.text}
-        </Text>
+        <SmallText fontFamily={"Josefin Sans"}>{props.text}</SmallText>
         <Column justifyContent={"end"} alignItems={"end"}>
           <Button
             borderRadius={"25px"}
             width={"100px"}
             justifyContent={"center"}
           >
-            <Text
-              color={"white"}
-              fontSize={"1.5em"}
-              fontFamily={"Josefin Sans"}
-            >
+            <SmallText color={"white"} fontFamily={"Josefin Sans"}>
               -{">"}
-            </Text>
+            </SmallText>
           </Button>
         </Column>
       </Column>
