@@ -9,9 +9,13 @@ width: ${(props) => props.width};
 height: ${(props) => props.height};
 padding: ${(props) => props.padding};
 border-radius: ${(props) => props.borderRadius};
-flex: 1 0 auto;
 display: flex;
-flex-flow: row nowrap;
+
+@media (min-width: 0px) {
+  flex: 0 1 auto;
+display: flex;
+flex-flow: row wrap;
+}
 
 @media (min-width: 480px) {
   flex: 1 1 auto;
@@ -53,6 +57,12 @@ flex-flow: row nowrap;
 backdrop-filter: blur(8px); /* Chrome and Opera */
 box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
 background-color: rgb(228 228 228 / 15%); 
+
+@media (min-width: 0px) {
+  flex: 0 1 auto;
+display: flex;
+flex-flow: row wrap;
+}
 
 @media (min-width: 480px) {
   flex: 1 1 auto;
@@ -98,6 +108,12 @@ flex: ${(props) => (props.flex ? props.flex : "1 0 auto")};
 display: flex;
 flex-flow: column nowrap;
 
+@media (min-width: 0px) {
+  flex: 1 1 auto;
+display: flex;
+flex-flow: column wrap;
+}
+
 @media (min-width: 480px) {
   flex: 1 1 auto;
 display: flex;
@@ -126,30 +142,14 @@ padding: ${(props) => props.padding};
 `;
 
 export const SmallPadding = styledComponents.div`
-padding: 10em;
+
+
+@media (min-width: 0px) {
+  padding: 1em;
+}
 
 @media (min-width: 480px) {
-  
-}
-
-@media (min-width: 768px) {
-  
-}
-
-@media (min-width: 1024px) {
-  padding: 10em;
-}
-
-@media (min-width: 1920px) {
-  padding: 13em;
-}
-`;
-
-export const ExtraSmallPadding = styledComponents.div`
-padding: 10em;
-
-@media (min-width: 480px) {
-  
+  padding: 2em;
 }
 
 @media (min-width: 768px) {
@@ -157,11 +157,35 @@ padding: 10em;
 }
 
 @media (min-width: 1024px) {
-  padding: 1em;
+  padding: 2em;
 }
 
 @media (min-width: 1920px) {
   padding: 2em;
+}
+`;
+
+export const ExtraSmallPadding = styledComponents.div`
+
+
+@media (min-width: 0px) {
+  padding: 0em;
+}
+
+@media (min-width: 480px) {
+  padding: 0em;
+}
+
+@media (min-width: 768px) {
+  padding: 0em;
+}
+
+@media (min-width: 1024px) {
+  padding: 1em;
+}
+
+@media (min-width: 1920px) {
+  padding: 1em;
 }
 `;
 
@@ -170,6 +194,10 @@ padding: ${(props) => props.padding};
 `;
 
 export const Text = styledComponents.h1`
+@media (min-width: 0px) {
+  font-size: 13px;
+}
+
 @media (min-width: 480px) {
     font-size: 20px;
   }
@@ -196,7 +224,7 @@ export const LargeText = styledComponents.h1`
   }
 
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   @media (min-width: 1024px) {
@@ -212,12 +240,16 @@ export const LargeText = styledComponents.h1`
 `;
 
 export const SmallText = styledComponents.h1`
+@media (min-width: 0px) {
+  font-size: 20px;
+}
+
 @media (min-width: 480px) {
     font-size: 20px;
   }
 
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   @media (min-width: 1024px) {

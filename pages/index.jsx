@@ -37,6 +37,13 @@ const BackgroundBlobContainer = styledComponents.div`
   flex-direction: column;
   background-position: center;
 
+  @media (min-width: 0px) {
+    width: 100vw;
+    height: 30vh;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
   @media (min-width: 480px) {
     width: 100vw;
     height: 50vh;
@@ -67,6 +74,11 @@ const BackgroundMyselfContainer = styledComponents.div`
   display: flex;
   flex-direction: column;
   background-position: center;
+
+  @media (min-width: 0px) {
+    width: 100vw;
+    height: 30vh;
+  }
 
   @media (min-width: 480px) {
     width: 100vw;
@@ -134,61 +146,52 @@ export default function Home() {
         <title>Francisco Gonzalez</title>
       </Head>
       <Column justifyContent={"start"}>
-        <Row backgroundColor={"transparent"}>
-          <Column>
-            <Row
-              backgroundColor={"transparent"}
-              justifyContent={"space-evenly"}
-            >
-              <BackgroundBlobContainer>
-                <Text color="white">Hello. My name is Francisco Gonzalez.</Text>
-                <Text color="white">
-                  I am a software engineer based in Texas.
-                </Text>
-              </BackgroundBlobContainer>
-              <BackgroundMyselfContainer>
-                <img
-                  src={myself.src}
-                  style={{
-                    flex: 1,
-                    width: "60%",
-                    justifyContent: "start",
-                    transform: "scaleX(-1)",
-                  }}
-                ></img>
-              </BackgroundMyselfContainer>
-            </Row>
-            <Padding padding={"3%"} />
-            <Row justifyContent={"space-evenly"} alignItems={"center"}>
-              <LogoWithSub
-                src={reactLogo.src}
-                subtitle={"React"}
-                subtitlePosition={"130px"}
-              />
-              <LogoWithSub
-                src={jsLogo.src}
-                subtitle={"JavaScript"}
-                subtitlePosition={"140px"}
-              />
-              <LogoWithSub
-                src={htmlLogo.src}
-                subtitle={"HTML5"}
-                subtitlePosition={"160px"}
-              />
-              <LogoWithSub
-                src={cssLogo.src}
-                subtitle={"CSS3"}
-                subtitlePosition={"160px"}
-              />
-              <LogoWithSub
-                src={nextLogo.src}
-                subtitle={"Next.js"}
-                subtitlePosition={"130px"}
-              />
-            </Row>
-          </Column>
+        <Row backgroundColor={"transparent"} justifyContent={"space-evenly"}>
+          <BackgroundBlobContainer>
+            <Text color="white">Hello. My name is Francisco Gonzalez.</Text>
+            <Text color="white">I am a software engineer based in Texas.</Text>
+          </BackgroundBlobContainer>
+          <BackgroundMyselfContainer>
+            <img
+              src={myself.src}
+              style={{
+                flex: 1,
+                width: "60%",
+                justifyContent: "start",
+                transform: "scaleX(-1)",
+              }}
+            ></img>
+          </BackgroundMyselfContainer>
         </Row>
-        <SmallPadding />
+        <Padding padding={"1em"} />
+        <Row justifyContent={"space-evenly"} alignItems={"center"}>
+          <LogoWithSub
+            src={reactLogo.src}
+            subtitle={"React"}
+            subtitlePosition={"130px"}
+          />
+          <LogoWithSub
+            src={jsLogo.src}
+            subtitle={"JavaScript"}
+            subtitlePosition={"140px"}
+          />
+          <LogoWithSub
+            src={htmlLogo.src}
+            subtitle={"HTML5"}
+            subtitlePosition={"160px"}
+          />
+          <LogoWithSub
+            src={cssLogo.src}
+            subtitle={"CSS3"}
+            subtitlePosition={"160px"}
+          />
+          <LogoWithSub
+            src={nextLogo.src}
+            subtitle={"Next.js"}
+            subtitlePosition={"130px"}
+          />
+        </Row>
+        <Padding padding={"9em"} />
         <Row backgroundColor={"transparent"} justifyContent={"center"}>
           <ResourceCard
             accentColor={"green"}

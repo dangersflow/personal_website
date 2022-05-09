@@ -9,7 +9,10 @@ display: flex;
 flex: 0 1;
 
 img{
-  width: 120px;
+
+  @media (min-width: 0px) {
+    width: 50px;
+  }
 
   @media (min-width: 480px) {
 

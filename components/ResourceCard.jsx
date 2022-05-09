@@ -7,6 +7,8 @@ import {
   Text,
   SmallText,
   LargeText,
+  SmallPadding,
+  ExtraSmallPadding,
 } from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import Image from "next/image";
@@ -29,12 +31,18 @@ const Card = styledComponents.div`
   min-height: ${(props) => props.minHeight};
   min-width: ${(props) => props.minWidth};
 
-  @media (min-width: 480px) {
+  @media (min-width: 0px) {
+    height: 35vh;
+    width: 100vw;
+  }
+
+@media (min-width: 480px) {
 
 }
 
 @media (min-width: 768px) {
-
+  height: 20em;
+  width: 35em;
 }
 
 @media (min-width: 1024px) {
@@ -48,7 +56,35 @@ const Card = styledComponents.div`
 }
 `;
 
-const CardImage = styledComponents(Image)`
+const CardImage = styledComponents.div`
+
+img{
+  @media (min-width: 0px) {
+    height: 5em;
+    width: 5em;
+  }
+  
+  @media (min-width: 480px) {
+    height: 10em;
+    width: 10em;
+  }
+  
+  @media (min-width: 768px) {
+    height: 6em;
+    width: 6em;
+  }
+  
+  @media (min-width: 1024px) {
+    height: 7em;
+    width: 7em;
+  }
+  
+  @media (min-width: 1920px) {
+    height: 7em;
+    width: 7em;
+  }
+
+}
 
 `;
 
@@ -66,16 +102,13 @@ export default function ResourceCard(props) {
     <Card accentColor={props.accentColor}>
       <Column>
         <Row backgroundColor={"transparent"} alignItems={"center"}>
-          <CardImage
-            src={props.image}
-            layout={"fixed"}
-            width={"100em"}
-            height={"100em"}
-          />
-          <Padding padding={"20px"} />
-          <LargeText className="lg">{props.title}</LargeText>
+          <CardImage>
+            <img src={props.image.src} alt="resource" />
+          </CardImage>
+          <SmallPadding />
+          <LargeText>{props.title}</LargeText>
         </Row>
-        <Padding padding={"10px"} />
+        <ExtraSmallPadding />
         <Divider />
         <SmallText fontFamily={"Josefin Sans"}>{props.text}</SmallText>
         <Column justifyContent={"end"} alignItems={"end"}>

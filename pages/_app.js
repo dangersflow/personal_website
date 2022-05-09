@@ -25,6 +25,12 @@ body{
   display:flex;
   flex: 1 0 auto;
   flex-direction:column;
+
+  @media (min-width: 0px) {
+    padding: 0;
+    margin-left:0;
+    margin-right:0;
+  }
   
   @media (min-width: 1920px) {
     margin-left:5%;
@@ -61,26 +67,6 @@ function MyApp({ Component, pageProps }) {
   const particlesLoaded = (container) => {
     console.log(container);
   };
-
-  const isMobileDevice = useMediaQuery({
-    query: "(min-device-width: 480px)",
-  });
-
-  const isTabletDevice = useMediaQuery({
-    query: "(min-device-width: 768px)",
-  });
-
-  const isLaptop = useMediaQuery({
-    query: "(min-device-width: 1024px)",
-  });
-
-  const isDesktop = useMediaQuery({
-    query: "(min-device-width: 1200px)",
-  });
-
-  const isBigScreen = useMediaQuery({
-    query: "(min-device-width: 1201px )",
-  });
 
   return (
     <>
