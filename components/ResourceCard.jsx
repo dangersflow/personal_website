@@ -33,11 +33,12 @@ const Card = styledComponents.div`
 
   @media (min-width: 0px) {
     height: 35vh;
-    width: 100vw;
+    width: 80vw;
   }
 
 @media (min-width: 480px) {
-
+  height: 35vh;
+  width: 80vw;
 }
 
 @media (min-width: 768px) {

@@ -165,6 +165,28 @@ export const SmallPadding = styledComponents.div`
 }
 `;
 
+export const HomePagePadding = styledComponents.div`
+@media (min-width: 0px) {
+  padding: 4em;
+}
+
+@media (min-width: 480px) {
+  padding: 9em;
+}
+
+@media (min-width: 768px) {
+  padding: 10em;
+}
+
+@media (min-width: 1024px) {
+  padding: 10em;
+}
+
+@media (min-width: 1920px) {
+  padding: 11em;
+}
+`;
+
 export const ExtraSmallPadding = styledComponents.div`
 
 

@@ -18,6 +18,7 @@ import {
   FrostedRow,
   SmallPadding,
   ExtraSmallPadding,
+  HomePagePadding,
 } from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import reactLogo from "../images/react.svg";
@@ -191,7 +192,7 @@ export default function Home() {
             subtitlePosition={"130px"}
           />
         </Row>
-        <Padding padding={"9em"} />
+        <HomePagePadding />
         <Row backgroundColor={"transparent"} justifyContent={"center"}>
           <ResourceCard
             accentColor={"green"}
