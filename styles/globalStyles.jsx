@@ -313,3 +313,37 @@ justify-content: ${(props) => props.justifyContent};
 align-items: ${(props) => props.alignItems};
 background-color: ${(props) => props.backgroundColor};
 `;
+
+export const AppBar = styledComponents.div`
+display: flex;
+flex-direction: row;
+justify-content: ${(props) => props.justifyContent};
+align-items: ${(props) => props.alignItems};
+background-color: ${(props) => props.backgroundColor};
+border-radius: ${(props) => props.borderRadius};
+`;
+
+export const FlatButton = styledComponents.button`
+justify-content: ${(props) => props.justifyContent};
+align-items: ${(props) => props.alignItems};
+width: ${(props) => props.width};
+height: ${(props) => props.height};
+padding: ${(props) => props.padding};
+border-radius: ${(props) => props.borderRadius};
+font-size: ${(props) => props.fontSize};
+font-weight: ${(props) => props.fontWeight};
+font-family: ${(props) => props.fontFamily};
+border: 2px solid black;
+display: flex;
+flex-direction: row;
+`;
+
+export const HorizontalDivider = styledComponents.div`
+display: flex;
+flex-direction: row;
+justify-content: ${(props) => props.justifyContent};
+align-items: ${(props) => props.alignItems};
+background-color: ${(props) => props.backgroundColor};
+border-radius: ${(props) => props.borderRadius};
+border-left: ${(props) => props.borderLeft};
+`;

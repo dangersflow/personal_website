@@ -19,6 +19,8 @@ import {
   SmallPadding,
   ExtraSmallPadding,
   HomePagePadding,
+  AppBar,
+  HorizontalDivider,
 } from "../styles/globalStyles";
 import styledComponents from "styled-components";
 import reactLogo from "../images/react.svg";
@@ -27,6 +29,7 @@ import cssLogo from "../images/css3.svg";
 import jsLogo from "../images/javascript.svg";
 import nextLogo from "../images/next-black.svg";
 import { LogoWithSub } from "../components/LogoWithSub";
+import { Button } from "@mui/material";
 
 const BackgroundBlobContainer = styledComponents.div`
   background-image: url(${blob2.src});
@@ -146,6 +149,22 @@ export default function Home() {
       <Head>
         <title>Francisco Gonzalez</title>
       </Head>
+      <Padding padding={"0.5em"} />
+      <AppBar
+        position="sticky"
+        backgroundColor={"#665698"}
+        borderRadius={"20px"}
+        justifyContent={"space-evenly"}
+      >
+        <Button fullWidth={"20vw"} href={"/"}>
+          <Text color="white">Home</Text>
+        </Button>
+        <HorizontalDivider borderLeft={"1px solid black"} />
+        <Button fullWidth={"20vw"} href={"/projects"}>
+          <Text color="white">Projects</Text>
+        </Button>
+      </AppBar>
+      <Padding padding={"1em"} />
       <Column justifyContent={"start"}>
         <Row backgroundColor={"transparent"} justifyContent={"space-evenly"}>
           <BackgroundBlobContainer>
