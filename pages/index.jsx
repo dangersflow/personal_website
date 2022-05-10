@@ -156,7 +156,7 @@ export default function Home() {
         borderRadius={"20px"}
         justifyContent={"space-evenly"}
       >
-        <Button fullWidth={"20vw"} href={"/"}>
+        <Button fullWidth={"20vw"}>
           <Text color="white">Home</Text>
         </Button>
         <HorizontalDivider borderLeft={"1px solid black"} />

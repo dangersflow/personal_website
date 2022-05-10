@@ -20,7 +20,7 @@ export default function Projects() {
           <Text color="white">Home</Text>
         </Button>
         <HorizontalDivider borderLeft={"1px solid black"} />
-        <Button fullWidth={"20vw"} href={"/projects"}>
+        <Button fullWidth={"20vw"}>
           <Text color="white">Projects</Text>
         </Button>
       </AppBar>
